@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void solve() {
+    long long int n; // Use long long int for larger numbers
+    cin >> n;
+    if (n % 2 != 0) {
+        cout << "YES" << endl;
+    } else {
+        while (n % 2 == 0) {
+            n = n / 2;
+        }
+        if (n > 1) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl; // Handle n == 1
+        }
+    }
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
